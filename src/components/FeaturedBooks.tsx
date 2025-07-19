@@ -5,29 +5,11 @@ import { Badge } from "@/components/ui/badge";
 const books = [
   {
     id: 1,
-    title: "Whispers in the Rain",
-    subtitle: "A Tale of Love and Loss",
-    description: "A heart-wrenching story about finding hope in the darkest moments and the power of human connection.",
-    genre: "Romance",
-    status: "Bestseller",
-    year: "2023"
-  },
-  {
-    id: 2,
-    title: "The Last Symphony",
-    subtitle: "Music that Transcends Time",
-    description: "When a mysterious violin holds the key to unlocking a century-old secret, music becomes magic.",
-    genre: "Historical Fiction",
-    status: "New Release",
-    year: "2024"
-  },
-  {
-    id: 3,
-    title: "Echoes of Tomorrow",
-    subtitle: "A Journey Through Time",
-    description: "In a world where past and future collide, one woman must choose between love and destiny.",
-    genre: "Fantasy",
-    status: "Coming Soon",
+    title: "The Wildflower of Assam",
+    subtitle: "A Historical Romance",
+    description: "A deeply moving story of forbidden love, loss, and longing set in 1980s Assam during a time of political unrest. A tale that captures the fragility of belonging and the resilience of hope.",
+    genre: "Historical Romance",
+    status: "Available Now",
     year: "2024"
   }
 ];
@@ -45,7 +27,8 @@ const FeaturedBooks = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex justify-center">
+          <div className="max-w-md">
           {books.map((book, index) => (
             <Card 
               key={book.id} 
@@ -90,8 +73,9 @@ const FeaturedBooks = () => {
           <Button variant="literary" size="lg">
             View All Books
           </Button>
+          </div>
         </div>
-      </div>
+        </div>
     </section>
   );
 };
