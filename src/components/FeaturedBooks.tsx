@@ -6,11 +6,13 @@ const books = [
   {
     id: 1,
     title: "The Wildflower of Assam",
-    subtitle: "A Historical Romance",
-    description: "A deeply moving story of forbidden love, loss, and longing set in 1980s Assam during a time of political unrest. A tale that captures the fragility of belonging and the resilience of hope.",
-    genre: "Historical Romance",
+    subtitle: "Through the eyes of the Wildflower…",
+    description: "Thirteen-year-old Shabana enters Assam with her family in search of a better life. Between the 1950s and early 1980s, this historical saga portrays the journey of women - from one country to another, from singlehood to married life, from abject poverty to comfort, and from tolerance to decisiveness.",
+    genre: "Historical Saga",
     status: "Available Now",
-    year: "2024"
+    year: "2024",
+    cover: "/lovable-uploads/31131159-f25d-40b8-b35a-68d81005c942.png",
+    amazonLink: "https://www.amazon.com/Wildflower-Assam-Gayatri-Sarkar-ebook/dp/B0FK1TPHD4"
   }
 ];
 
@@ -28,7 +30,7 @@ const FeaturedBooks = () => {
         </div>
         
         <div className="flex justify-center">
-          <div className="max-w-md">
+          <div className="max-w-4xl">
           {books.map((book, index) => (
             <Card 
               key={book.id} 
@@ -36,33 +38,56 @@ const FeaturedBooks = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-8">
-                <div className="flex justify-between items-start mb-4">
-                  <Badge 
-                    variant={book.status === "Bestseller" ? "default" : book.status === "New Release" ? "secondary" : "outline"}
-                    className="mb-2"
-                  >
-                    {book.status}
-                  </Badge>
-                  <span className="text-sm text-muted-foreground">{book.year}</span>
-                </div>
-                
-                <h3 className="text-2xl font-bold text-primary mb-2 group-hover:text-accent transition-colors">
-                  {book.title}
-                </h3>
-                <h4 className="text-lg text-accent font-medium mb-4">
-                  {book.subtitle}
-                </h4>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  {book.description}
-                </p>
-                
-                <div className="flex justify-between items-center">
-                  <Badge variant="outline" className="text-literary-navy border-literary-navy">
-                    {book.genre}
-                  </Badge>
-                  <Button variant="ghost" className="text-accent hover:text-accent/80">
-                    Learn More →
-                  </Button>
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div className="order-2 md:order-1">
+                    <div className="flex justify-between items-start mb-4">
+                      <Badge 
+                        variant={book.status === "Bestseller" ? "default" : book.status === "New Release" ? "secondary" : "outline"}
+                        className="mb-2"
+                      >
+                        {book.status}
+                      </Badge>
+                      <span className="text-sm text-muted-foreground">{book.year}</span>
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-primary mb-2 group-hover:text-accent transition-colors">
+                      {book.title}
+                    </h3>
+                    <h4 className="text-lg text-accent font-medium mb-4">
+                      {book.subtitle}
+                    </h4>
+                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                      {book.description}
+                    </p>
+                    
+                    <div className="flex flex-col sm:flex-row gap-4 items-start">
+                      <Badge variant="outline" className="text-literary-navy border-literary-navy">
+                        {book.genre}
+                      </Badge>
+                      <div className="flex gap-3">
+                        <Button 
+                          variant="literary" 
+                          size="sm"
+                          onClick={() => window.open(book.amazonLink, '_blank')}
+                        >
+                          Buy on Amazon
+                        </Button>
+                        <Button variant="ghost" className="text-accent hover:text-accent/80">
+                          Learn More →
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="order-1 md:order-2 flex justify-center">
+                    <div className="relative group-hover:scale-105 transition-transform duration-300">
+                      <img 
+                        src={book.cover} 
+                        alt={`${book.title} book cover`}
+                        className="w-64 h-auto rounded-lg shadow-book"
+                      />
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
