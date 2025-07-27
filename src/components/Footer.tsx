@@ -5,10 +5,10 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-2xl font-bold mb-4 bg-gradient-accent bg-clip-text text-transparent">
-              Sarah Mitchell
+              Gayatri Sarkar
             </h3>
             <p className="text-primary-foreground/80 leading-relaxed">
-              Bestselling author crafting stories that touch hearts and inspire souls. 
+              Passionate storyteller exploring the complexities of human relationships, memory, and identity. 
               Thank you for being part of this incredible journey.
             </p>
           </div>
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/60">
-          <p>&copy; 2024 Sarah Mitchell. All rights reserved. | Website designed with love for storytelling.</p>
+          <p>&copy; 2024 Gayatri Sarkar. All rights reserved. | Website designed with love for storytelling.</p>
         </div>
       </div>
     </footer>

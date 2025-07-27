@@ -26,7 +26,7 @@ const Contact = () => {
                 <h3 className="text-lg font-semibold text-primary mb-2">Email Me</h3>
                 <p className="text-muted-foreground mb-4">For general inquiries and collaborations</p>
                 <Button variant="outline" className="w-full">
-                  sarah@sarahmitchell.com
+                  Gayatrinsarkar@gmail.com
                 </Button>
               </CardContent>
             </Card>
@@ -37,7 +37,7 @@ const Contact = () => {
                 <h3 className="text-lg font-semibold text-primary mb-2">Social Media</h3>
                 <p className="text-muted-foreground mb-4">Follow my writing journey</p>
                 <Button variant="outline" className="w-full">
-                  @SarahMitchellAuthor
+                  Gayatrisarkar.com.au
                 </Button>
               </CardContent>
             </Card>
