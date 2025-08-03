@@ -60,21 +60,54 @@ const FeaturedBooks = () => {
                       {book.description}
                     </p>
                     
-                    <div className="flex flex-col sm:flex-row gap-4 items-start">
+                    <div className="flex flex-col gap-4">
                       <Badge variant="outline" className="text-literary-navy border-literary-navy">
                         {book.genre}
                       </Badge>
-                      <div className="flex gap-3">
-                        <Button 
-                          variant="literary" 
-                          size="sm"
-                          onClick={() => window.open(book.amazonLink, '_blank')}
-                        >
-                          Buy on Amazon
-                        </Button>
-                        <Button variant="ghost" className="text-accent hover:text-accent/80">
-                          Learn More →
-                        </Button>
+                      <div className="space-y-3">
+                        <h5 className="text-sm font-semibold text-primary">Available at:</h5>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          <Button 
+                            variant="literary" 
+                            size="sm"
+                            onClick={() => window.open('https://amzn.in/d/akgGBbj', '_blank')}
+                            className="w-full"
+                          >
+                            Amazon Global
+                          </Button>
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            onClick={() => window.open('https://lnkd.in/g2TDrRAx', '_blank')}
+                            className="w-full"
+                          >
+                            Amazon Australia
+                          </Button>
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            onClick={() => window.open('https://lnkd.in/gBXNBBuU', '_blank')}
+                            className="w-full"
+                          >
+                            Flipkart
+                          </Button>
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            onClick={() => window.open('https://lnkd.in/gXRx4DSK', '_blank')}
+                            className="w-full"
+                          >
+                            Notion Press
+                          </Button>
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            onClick={() => window.open('https://lnkd.in/gnVdxGgQ', '_blank')}
+                            className="w-full col-span-1 sm:col-span-2"
+                          >
+                            Pothi
+                          </Button>
+                        </div>
                       </div>
                     </div>
                   </div>
