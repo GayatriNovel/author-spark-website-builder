@@ -73,7 +73,7 @@ const FeaturedBooks = () => {
                             onClick={() => window.open('https://amzn.in/d/akgGBbj', '_blank')}
                             className="w-full"
                           >
-                            Amazon Global
+                            Amazon India
                           </Button>
                           <Button 
                             variant="outline" 
