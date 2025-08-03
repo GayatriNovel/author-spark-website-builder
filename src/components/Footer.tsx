@@ -26,10 +26,9 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <ul className="space-y-2 text-primary-foreground/80">
-              <li><a href="#" className="hover:text-accent transition-colors">Instagram</a></li>
+              <li><a href="https://www.instagram.com/__peepingout_?igsh=MXV0MTN4NGdvdWl5NQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Instagram</a></li>
               <li><a href="#" className="hover:text-accent transition-colors">Twitter</a></li>
               <li><a href="#" className="hover:text-accent transition-colors">Goodreads</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Newsletter</a></li>
             </ul>
           </div>
         </div>

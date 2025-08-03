@@ -78,7 +78,7 @@ const FeaturedBooks = () => {
                           <Button 
                             variant="outline" 
                             size="sm"
-                            onClick={() => window.open('https://lnkd.in/g2TDrRAx', '_blank')}
+                            onClick={() => window.open('https://amzn.asia/d/2BpcQD8', '_blank')}
                             className="w-full"
                           >
                             Amazon Australia
@@ -86,7 +86,7 @@ const FeaturedBooks = () => {
                           <Button 
                             variant="outline" 
                             size="sm"
-                            onClick={() => window.open('https://lnkd.in/gBXNBBuU', '_blank')}
+                            onClick={() => window.open('https://flipkart.com/the-wildflower-of-assam', '_blank')}
                             className="w-full"
                           >
                             Flipkart
@@ -94,7 +94,7 @@ const FeaturedBooks = () => {
                           <Button 
                             variant="outline" 
                             size="sm"
-                            onClick={() => window.open('https://lnkd.in/gXRx4DSK', '_blank')}
+                            onClick={() => window.open('https://notionpress.com/in/read/the-wildflower-of-assam', '_blank')}
                             className="w-full"
                           >
                             Notion Press
@@ -102,7 +102,7 @@ const FeaturedBooks = () => {
                           <Button 
                             variant="outline" 
                             size="sm"
-                            onClick={() => window.open('https://lnkd.in/gnVdxGgQ', '_blank')}
+                            onClick={() => window.open('https://store.pothi.com/book/gayatri-sarkar-wildflower-assam', '_blank')}
                             className="w-full col-span-1 sm:col-span-2"
                           >
                             Pothi
