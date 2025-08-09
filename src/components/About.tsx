@@ -45,15 +45,17 @@ const About = () => {
             
             <Card className="bg-accent text-white shadow-elegant">
               <CardContent className="p-6 text-center">
-                <div className="text-3xl font-bold mb-2">1980s</div>
-                <div className="text-sm font-medium">Assam Setting</div>
+                 <div className="text-3xl font-bold mb-2">Theme</div>
+                <div className="text-2xl font-bold mb-2">Political Unrest</div>
+                <div className="text-sm font-medium">Illegal Immigration</div>
               </CardContent>
             </Card>
             
             <Card className="bg-primary text-primary-foreground shadow-book">
               <CardContent className="p-6 text-center">
-                <div className="text-3xl font-bold mb-2">Historical</div>
-                <div className="text-sm font-medium">Romance</div>
+                <div className="text-3xl font-bold mb-2">Genre</div>
+                <div className="text-2xl font-bold mb-2">Historical</div>
+                <div className="text-sm font-medium">Women's Fiction</div>
               </CardContent>
             </Card>
           </div>
