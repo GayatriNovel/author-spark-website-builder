@@ -17,11 +17,11 @@ const About = () => {
               </p>
               <p>
                 Born and raised in India, Gayatri brings a nuanced voice shaped by lived experience, empathy, and an observant eye. 
-                Her debut novel, The Wildflower of Assam, is a deeply moving historical romance set in 1980s Assam—a story of 
+                Her debut novel, The Wildflower of Assam, is a deeply moving Historical and Women's fiction set in 1980s Assam—a story of 
                 forbidden love, loss, and longing at the edge of political unrest.
               </p>
               <p>
-                When she's not writing, Gayatri can be found buried in books, journaling at sunrise, or brewing the perfect cup of chai. 
+                When she's not writing, Gayatri can be found buried in books, or brewing the perfect cup of chai. 
                 She currently lives in Australia with her family, where she continues to craft stories that capture the fragility 
                 of belonging and the resilience of hope.
               </p>
@@ -46,16 +46,14 @@ const About = () => {
             <Card className="bg-accent text-white shadow-elegant">
               <CardContent className="p-6 text-center">
                  <div className="text-3xl font-bold mb-2">Theme</div>
-                <div className="text-2xl font-bold mb-2">Political Unrest</div>
-                <div className="text-sm font-medium">Illegal Immigration</div>
+                <div className="text-2xl font-bold mb-2">Political Unrest & Illegal Immigration</div>
               </CardContent>
             </Card>
             
             <Card className="bg-primary text-primary-foreground shadow-book">
               <CardContent className="p-6 text-center">
                 <div className="text-3xl font-bold mb-2">Genre</div>
-                <div className="text-2xl font-bold mb-2">Historical</div>
-                <div className="text-sm font-medium">Women's Fiction</div>
+                <div className="text-2xl font-bold mb-2">Historical & Women's Fiction</div>
               </CardContent>
             </Card>
           </div>
