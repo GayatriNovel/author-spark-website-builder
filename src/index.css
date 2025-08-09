@@ -120,4 +120,23 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+  /* Smooth scroll for in-page jumps like #contact */
+@layer base {
+  html { scroll-behavior: smooth; }
+}
+
+/* Utilities for your design tokens */
+@layer utilities {
+  /* Gradients used in the hero/title accent */
+  .bg-gradient-hero { background-image: var(--gradient-hero); }
+  .bg-gradient-accent { background-image: var(--gradient-accent); }
+
+  /* Shadows used by your Card/Button classes */
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-book { box-shadow: var(--shadow-book); }
+
+  /* Convenience color class used in Contact.tsx */
+  .bg-warm-cream { background-color: hsl(var(--warm-cream)); }
+}
+
 }
