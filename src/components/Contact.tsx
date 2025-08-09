@@ -26,7 +26,7 @@ const Contact = () => {
                 <h3 className="text-lg font-semibold text-primary mb-2">Email Me</h3>
                 <p className="text-muted-foreground mb-4">For general inquiries and collaborations</p>
                 <Button variant="outline" className="w-full" asChild>
-                  <a href="mailto:Gayatrinsarkar@gmail.com">Gayatrinsarkar@gmail.com</a>
+                  <a href="mailto:gayatrinsarkar@gmail.com">gayatrinsarkar@gmail.com</a>
                 </Button>
               </CardContent>
             </Card>
@@ -38,7 +38,7 @@ const Contact = () => {
                 <p className="text-muted-foreground mb-4">Follow my writing journey</p>
                 <Button variant="outline" className="w-full" asChild>
                   <a href="https://gayatrisarkar.com.au" target="_blank" rel="noreferrer">
-                    Gayatrisarkar.com.au
+                    gayatrisarkar.com.au
                   </a>
                 </Button>
               </CardContent>
