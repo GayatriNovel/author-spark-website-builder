@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Star } from "lucide-react";
 
 const books = [
   {
@@ -110,6 +111,43 @@ const FeaturedBooks = () => {
                         </div>
                       </div>
                     </div>
+
+                    <article className="mt-8 border-t border-accent/20 pt-6" aria-label="Amazon review">
+                      <div className="flex items-center justify-between gap-3 mb-3">
+                        <h5 className="text-sm font-semibold text-primary">Amazon review</h5>
+                        <div className="flex items-center gap-1 text-accent" aria-label="5 out of 5 stars">
+                          <Star className="w-4 h-4" fill="currentColor" />
+                          <Star className="w-4 h-4" fill="currentColor" />
+                          <Star className="w-4 h-4" fill="currentColor" />
+                          <Star className="w-4 h-4" fill="currentColor" />
+                          <Star className="w-4 h-4" fill="currentColor" />
+                        </div>
+                      </div>
+                      <p className="text-sm text-muted-foreground mb-1">Reviewed in India on 2 August 2025</p>
+                      <p className="font-semibold text-primary mb-2">A Touching Story of Strength and Hope</p>
+                      <blockquote className="text-muted-foreground leading-relaxed">
+                        After a long time really enjoyed reading book. The book follows the journey of a young girl. I liked how the author showed the real struggles of women, including dealing with family problems and finding their own way. The writing paints a beautiful picture of Assam and shows both its peace and its difficult moments. If you like stories about resilience and personal growth set in a rich cultural background, I recommend this book. Looking forward to reading more books from Gayatri Sarkar.
+                      </blockquote>
+                      <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                          "@context": "https://schema.org",
+                          "@type": "Book",
+                          name: book.title,
+                          author: { "@type": "Person", name: "Gayatri Sarkar" },
+                          url: "https://amzn.in/d/akgGBbj",
+                          review: {
+                            "@type": "Review",
+                            name: "A Touching Story of Strength and Hope",
+                            reviewBody: "After a long time really enjoyed reading book. The book follows the journey of a young girl. I liked how the author showed the real struggles of women, including dealing with family problems and finding their own way. The writing paints a beautiful picture of Assam and shows both its peace and its difficult moments. If you like stories about resilience and personal growth set in a rich cultural background, I recommend this book. Looking forward to reading more books from Gayatri Sarkar.",
+                            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+                            author: { "@type": "Person", name: "Amazon customer" },
+                            datePublished: "2025-08-02",
+                            publisher: { "@type": "Organization", name: "Amazon India" }
+                          }
+                        }) }}
+                      />
+                    </article>
                   </div>
                   
                   <div className="order-1 md:order-2 flex justify-center">
