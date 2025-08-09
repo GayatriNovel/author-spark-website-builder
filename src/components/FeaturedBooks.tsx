@@ -87,7 +87,7 @@ const FeaturedBooks = () => {
                           <Button 
                             variant="outline" 
                             size="sm"
-                            onClick={() => window.open('https://flipkart.com/the-wildflower-of-assam', '_blank')}
+                            onClick={() => window.open('https://www.flipkart.com/search?q=the+wildflower+of+assam&sid=bks&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_1_17_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_17_na_na_na&as-pos=1&as-type=RECENT&suggestionId=the+wildflower+of+assam%7CBooks&requestId=c0e84e0c-b89f-428c-9d69-298a1ff7d716&as-searchtext=the%20wildflower%20of%20assam', '_blank')}
                             className="w-full"
                           >
                             Flipkart
