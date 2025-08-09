@@ -26,6 +26,18 @@ const About = () => {
                 of belonging and the resilience of hope.
               </p>
             </div>
+
+            <figure className="mt-8">
+              <img
+                src="/lovable-uploads/28bfa1a0-9167-44ca-8be0-c0a4407d2d6a.png"
+                alt="Oxford graduation ceremony — Diploma in Creative Writing at the University of Oxford"
+                loading="lazy"
+                className="w-full rounded-lg shadow-elegant"
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground">
+                Glimpse from my Oxford graduation
+              </figcaption>
+            </figure>
           </div>
           
           <div className="grid grid-cols-2 gap-6 animate-scale-in">
