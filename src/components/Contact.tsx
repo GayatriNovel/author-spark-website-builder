@@ -6,7 +6,7 @@ import { Mail, MessageSquare, BookOpen } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section className="py-20 bg-warm-cream">
+    <section id="contact" className="py-20 bg-warm-cream scroll-mt-24">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
@@ -25,8 +25,8 @@ const Contact = () => {
                 <Mail className="w-8 h-8 text-accent mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-primary mb-2">Email Me</h3>
                 <p className="text-muted-foreground mb-4">For general inquiries and collaborations</p>
-                <Button variant="outline" className="w-full">
-                  Gayatrinsarkar@gmail.com
+                <Button variant="outline" className="w-full" asChild>
+                  <a href="mailto:Gayatrinsarkar@gmail.com">Gayatrinsarkar@gmail.com</a>
                 </Button>
               </CardContent>
             </Card>
@@ -36,8 +36,10 @@ const Contact = () => {
                 <MessageSquare className="w-8 h-8 text-accent mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-primary mb-2">Social Media</h3>
                 <p className="text-muted-foreground mb-4">Follow my writing journey</p>
-                <Button variant="outline" className="w-full">
-                  Gayatrisarkar.com.au
+                <Button variant="outline" className="w-full" asChild>
+                  <a href="https://gayatrisarkar.com.au" target="_blank" rel="noreferrer">
+                    Gayatrisarkar.com.au
+                  </a>
                 </Button>
               </CardContent>
             </Card>
