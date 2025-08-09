@@ -165,11 +165,6 @@ const FeaturedBooks = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12">
-          <Button variant="literary" size="lg">
-            View All Books
-          </Button>
-          </div>
         </div>
         </div>
     </section>
