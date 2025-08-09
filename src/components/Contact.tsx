@@ -37,8 +37,8 @@ const Contact = () => {
                 <h3 className="text-lg font-semibold text-primary mb-2">Social Media</h3>
                 <p className="text-muted-foreground mb-4">Follow my writing journey</p>
                 <Button variant="outline" className="w-full" asChild>
-                  <a href="https://gayatrisarkar.com.au" target="_blank" rel="noreferrer">
-                    gayatrisarkar.com.au
+                  <a href="https://www.gayatrisarkar.com.au" target="_blank" rel="noreferrer">
+                    www.gayatrisarkar.com.au
                   </a>
                 </Button>
               </CardContent>
