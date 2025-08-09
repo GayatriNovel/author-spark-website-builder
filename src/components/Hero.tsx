@@ -38,9 +38,6 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="literary" size="lg" className="min-w-[200px]">
-              Explore My Books
-            </Button>
             <Button
               variant="elegant"
               size="lg"
