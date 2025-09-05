@@ -24,4 +24,30 @@ const App = () => (
   </QueryClientProvider>
 );
 
+function Footer() {
+  return (
+    <footer style={{ textAlign: "center", padding: "1rem" }}>
+      <a
+        href="https://www.instagram.com/YOUR_HANDLE"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ margin: "0 10px" }}
+      >
+        Instagram
+      </a>
+      <a
+        href="https://www.goodreads.com/author/show/YOUR_AUTHOR_ID"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ margin: "0 10px" }}
+      >
+        Goodreads
+      </a>
+    </footer>
+  );
+}
+
+export default Footer;
+
+
 export default App;
