@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/60">
-          <p>&copy; 2024 Gayatri Sarkar. All rights reserved. | Website designed with love for storytelling.</p>
+          <p>&copy; 2025 Gayatri Sarkar. All rights reserved. | Website designed with love for storytelling.</p>
         </div>
       </div>
     </footer>
