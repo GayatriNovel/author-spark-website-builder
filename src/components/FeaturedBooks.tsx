@@ -11,7 +11,7 @@ const books = [
     description: "Thirteen-year-old Shabana enters Assam with her family in search of a better life. Between the 1950s and early 1980s, this historical saga portrays the journey of women - from one country to another, from singlehood to married life, from abject poverty to comfort, and from tolerance to decisiveness.",
     genre: "Historical Saga",
     status: "Available Now",
-    year: "2024",
+    //year: "2024",
     cover: "/lovable-uploads/31131159-f25d-40b8-b35a-68d81005c942.png",
     amazonLink: "https://www.amazon.com/Wildflower-Assam-Gayatri-Sarkar-ebook/dp/B0FK1TPHD4"
   }
