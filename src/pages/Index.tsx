@@ -3,6 +3,8 @@ import FeaturedBooks from "@/components/FeaturedBooks";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import GoodreadsReviews from "@/components/GoodreadsReviews";
+
 
 const Index = () => {
   return (
