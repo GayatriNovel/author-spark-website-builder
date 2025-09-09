@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import goodreadsreview from "./GoodreadsReviews";
+import GoodreadsReviews from "./GoodreadsReviews";  // ✅ fixed import (capitalized + plural)
 
 const queryClient = new QueryClient();
 
@@ -14,7 +14,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-       <GoodreadsReviews />
+      <GoodreadsReviews />   {/* ✅ matches import */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
