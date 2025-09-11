@@ -23,7 +23,7 @@ const About = () => {
               <p>
                 When she's not writing, Gayatri can be found buried in books, or brewing the perfect cup of chai. 
                 She currently lives in Australia with her family, where she continues to craft stories that capture the fragility 
-                of belonging and the resilience of hope.
+                of belonging and the resilience of hope. She is an Oxford graduate in Creative Writing, with a keen interest in exploring social issues through her writing. 
               </p>
             </div>
 
