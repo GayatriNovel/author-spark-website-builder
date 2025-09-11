@@ -35,7 +35,7 @@ const About = () => {
                 className="w-full rounded-lg shadow-elegant"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground">
-                Glimpse from my Oxford graduation
+                Glimpse from her Oxford graduation
               </figcaption>
             </figure>
           </div>
