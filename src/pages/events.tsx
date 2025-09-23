@@ -25,7 +25,7 @@ const EVENTS: EventItem[] = [
     registrationUrl:
       "https://www.facebook.com/events/1430072651429073",
     status: "upcoming",
-    cover: "/lovable-uploads/kolkata.jpg",
+    cover: "/lovable-uploads/kolkata.png",
   },
   {
     id: "2025-10-12-bengaluru",
@@ -36,7 +36,7 @@ const EVENTS: EventItem[] = [
     description:
       "An evening on historical & women's fiction, migration, and resilience.",
     registrationUrl:
-      "https://www.facebook.com/events/REPLACE_WITH_EVENT_ID_BANGALORE",
+      "https://www.facebook.com/events/786696447487878",
     status: "upcoming",
     cover: "/lovable-uploads/bangalore.jpg",
   },
@@ -48,7 +48,7 @@ const EVENTS: EventItem[] = [
     date: "Sat, Oct 18, 2025 · 5:00 PM (IST)",
     description: "Reading, discussion, audience Q&A, and book signing.",
     registrationUrl:
-      "https://www.facebook.com/events/REPLACE_WITH_EVENT_ID_PUNE",
+      "https://www.facebook.com/events/807002092292494",
     status: "upcoming",
     cover: "/lovable-uploads/pune.jpg",
   },
