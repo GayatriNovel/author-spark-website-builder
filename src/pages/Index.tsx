@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Hero from "@/components/Hero";
 import FeaturedBooks from "@/components/FeaturedBooks";
 import About from "@/components/About";
@@ -15,6 +16,17 @@ const Index = () => {
 
       {/* Goodreads Reviews at the bottom */}
       <GoodreadsReviews />
+
+      {/* New section for Events */}
+      <div className="text-center py-8 bg-gray-50">
+        <h2 className="text-2xl font-semibold mb-4">Join My Author Events</h2>
+        <Link
+          to="/events"
+          className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg shadow hover:bg-indigo-700 transition"
+        >
+          View Events & RSVP
+        </Link>
+      </div>
 
       <Footer />
     </div>
