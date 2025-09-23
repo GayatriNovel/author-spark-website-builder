@@ -50,7 +50,7 @@ const EVENTS: EventItem[] = [
     registrationUrl:
       "https://www.facebook.com/events/807002092292494",
     status: "upcoming",
-    cover: "/lovable-uploads/Pune.png",
+    cover: "/lovable-uploads/Pune-2.png",
   },
   {
     id: "2025-09-18-brisbane",
