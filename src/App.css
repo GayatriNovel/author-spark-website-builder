@@ -1,10 +1,4 @@
-import Events from "./pages/Events";
-<Route path="/Events" element={<Events />} />
-import { Link } from "react-router-dom";
-// ...
-<Link to="/events">Events</Link>
-
-                               
+                         
 #root {
   max-width: 1280px;
   margin: 0 auto;
