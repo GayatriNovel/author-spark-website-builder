@@ -75,7 +75,7 @@ const BRISBANE_PHOTOS: string[] = [
 
 // Optional: YouTube/Vimeo embed for Brisbane highlights
 const BRISBANE_VIDEOS: { title: string; embedUrl: string }[] = [
-  { title: "Highlights Reel", embedUrl: "https://www.youtube.com/embed/REPLACE_VIDEO_ID" },
+  { title: "Highlights Reel", embedUrl: "https://www.youtube.com/embed/x4QMCMoz6ec" },
 ];
 
 export default function Events() {
