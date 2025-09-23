@@ -38,7 +38,7 @@ const EVENTS: EventItem[] = [
     registrationUrl:
       "https://www.facebook.com/events/786696447487878",
     status: "upcoming",
-    cover: "/lovable-uploads/bangalore.jpg",
+    cover: "/lovable-uploads/Bangalore.png",
   },
   {
     id: "2025-10-18-pune",
