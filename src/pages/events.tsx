@@ -31,7 +31,7 @@ const EVENTS: EventItem[] = [
     id: "2025-10-12-bengaluru",
     title: "In Conversation — The Wildflower of Assam",
     city: "Bengaluru",
-    venue: "Atta Galatta, Koramangala",
+    venue: "Atta Galatta, Indiranagar",
     date: "Sun, Oct 12, 2025 · 5:00 PM (IST)",
     description:
       "An evening on historical & women's fiction, migration, and resilience.",
@@ -50,7 +50,7 @@ const EVENTS: EventItem[] = [
     registrationUrl:
       "https://www.facebook.com/events/807002092292494",
     status: "upcoming",
-    cover: "/lovable-uploads/Pune-2.png",
+    cover: "/lovable-uploads/Pune-3.png",
   },
   {
     id: "2025-09-18-brisbane",
