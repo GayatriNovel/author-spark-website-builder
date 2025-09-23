@@ -70,7 +70,7 @@ const BRISBANE_PHOTOS: string[] = [
   "/lovable-uploads/B1D08258-B77C-4761-81D0-7DC269260C93_1_102_o.jpeg",
   "/lovable-uploads/84D2F757-E641-4EEE-AA89-10072F649042_1_102_o.jpeg",
   "/lovable-uploads/00090A3D-81D6-4DAD-9DBD-F4E1106649E2_1_105_c.jpeg",
-  "/lovable-uploads/brisbane-2025-09-4.jpg",
+  "/lovable-uploads/iScreen Shoter - Photos - 250923165250.png",
 ];
 
 // Optional: YouTube/Vimeo embed for Brisbane highlights
