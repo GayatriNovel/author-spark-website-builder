@@ -317,3 +317,6 @@ export default function Events() {
     </main>
   );
 }
+
+export default function Events() { ... }
+
