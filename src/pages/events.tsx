@@ -118,7 +118,7 @@ export default function Events() {
                   style={{
                     width: "100%",
                     height: 176,
-                    objectFit: "cover",
+                    objectFit: "contain",
                     borderRadius: 8,
                     marginBottom: 12,
                   }}
@@ -292,7 +292,7 @@ export default function Events() {
                           style={{
                             width: "100%",
                             height: 176,
-                            objectFit: "cover",
+                            objectFit: "contain",
                             borderRadius: 8,
                             border: "1px solid #eee",
                           }}
