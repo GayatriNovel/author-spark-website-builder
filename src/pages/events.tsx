@@ -300,8 +300,8 @@ export default function Events() {
                       ))}
                     </div>
                     <p style={{ marginTop: 6, fontSize: 12, color: "#777" }}>
-                      Add/edit photos in <code>/public/lovable-uploads</code> and
-                      update the list above as needed.
+                      //Add/edit photos in <code>/public/lovable-uploads</code> and
+                      //update the list above as needed.
                     </p>
                   </div>
                 )}
