@@ -67,8 +67,8 @@ const EVENTS: EventItem[] = [
 
 // Put your uploaded photos (exact filenames) under /public/lovable-uploads
 const BRISBANE_PHOTOS: string[] = [
-  "/lovable-uploads/brisbane-2025-09-1.jpg",
-  "/lovable-uploads/brisbane-2025-09-2.jpg",
+  "/lovable-uploads/B1D08258-B77C-4761-81D0-7DC269260C93_1_102_o.jpeg",
+  "/lovable-uploads/84D2F757-E641-4EEE-AA89-10072F649042_1_102_o.jpg",
   "/lovable-uploads/brisbane-2025-09-3.jpg",
   "/lovable-uploads/brisbane-2025-09-4.jpg",
 ];
