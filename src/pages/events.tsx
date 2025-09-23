@@ -23,7 +23,7 @@ const EVENTS: EventItem[] = [
     description:
       "Conversation and reading from the novel, followed by audience Q&A and signing.",
     registrationUrl:
-      "https://www.facebook.com/events/REPLACE_WITH_EVENT_ID_KOLKATA",
+      "https://www.facebook.com/events/1430072651429073",
     status: "upcoming",
     cover: "/lovable-uploads/kolkata.jpg",
   },
