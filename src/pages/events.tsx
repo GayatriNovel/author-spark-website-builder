@@ -1,5 +1,6 @@
 // src/pages/events.tsx
 import React from "react";
+import { Link } from "react-router-dom";
 
 type EventItem = {
   id: string;
@@ -313,6 +314,23 @@ export default function Events() {
 
       <footer style={{ marginTop: 24, textAlign: "center", fontSize: 12, color: "#777" }}>
         For venue-specific questions, please contact the host bookstore.
+         {/* Back to Home button */}
+         <div style={{ marginTop: 16 }}>
+          <Link
+            to="/"
+            style={{
+            display: "inline-block",
+            padding: "10px 18px",
+            backgroundColor: "#4f46e5", // indigo
+            color: "#fff",
+            borderRadius: 8,
+            textDecoration: "none",
+            fontSize: 14,
+          }}
+          >
+            ← Back to Home
+          </Link>
+        </div>
       </footer>
     </main>
   );
