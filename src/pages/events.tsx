@@ -25,7 +25,7 @@ const EVENTS: EventItem[] = [
     registrationUrl:
       "https://www.facebook.com/events/1430072651429073",
     status: "upcoming",
-    cover: "/lovable-uploads/kolkata.png",
+    cover: "/lovable-uploads/Kolkata-2.png",
   },
   {
     id: "2025-10-12-bengaluru",
