@@ -1,25 +1,16 @@
-// /app/events/page.tsx (Next.js App Router) or /pages/events.tsx (Pages Router)
-// Drop this file into your repo and adjust paths as needed.
-// Tailwind assumed. Uses shadcn/ui Buttons if available, but falls back gracefully.
-
+// src/pages/events.tsx
 import React from "react";
-import Link from "next/link";
 
-// ---- 1) Edit your events here ----
-// Replace the registrationUrl placeholders with your live Facebook Event links or a form link (Tally/Google Forms).
-// If you add a video URL (YouTube/Vimeo), it will be rendered in the Brisbane Past Event gallery.
-
-export type EventItem = {
+type EventItem = {
   id: string;
   title: string;
   city: string;
   venue: string;
-  date: string; // ISO 8601 (local time ok) e.g. "2025-10-09T18:00:00+05:30"
-  timezone: string; // e.g. "Asia/Kolkata" or "Australia/Brisbane"
+  date: string; // human-friendly date/time text
   description?: string;
   registrationUrl?: string;
   status: "upcoming" | "past";
-  cover?: string; // optional image path
+  cover?: string; // optional image path under /public/lovable-uploads
 };
 
 const EVENTS: EventItem[] = [
@@ -28,166 +19,253 @@ const EVENTS: EventItem[] = [
     title: "Author Talk & Signing — The Wildflower of Assam",
     city: "Kolkata",
     venue: "Oxford Bookstore, Park Street",
-    date: "2025-10-09T18:00:00+05:30",
-    timezone: "Asia/Kolkata",
+    date: "Thu, Oct 9, 2025 · 6:00 PM (IST)",
     description:
       "Conversation and reading from the novel, followed by audience Q&A and signing.",
-    registrationUrl: "https://facebook.com/events/1430072651429073",
+    registrationUrl:
+      "https://www.facebook.com/events/REPLACE_WITH_EVENT_ID_KOLKATA",
     status: "upcoming",
-    cover: "/images/events/kolkata.jpg",
+    cover: "/lovable-uploads/kolkata.jpg",
   },
   {
-    id: "2025-10-12-bangalore",
+    id: "2025-10-12-bengaluru",
     title: "In Conversation — The Wildflower of Assam",
     city: "Bengaluru",
     venue: "Atta Galatta, Koramangala",
-    date: "2025-10-12T17:00:00+05:30",
-    timezone: "Asia/Kolkata",
+    date: "Sun, Oct 12, 2025 · 5:00 PM (IST)",
     description:
       "An evening on historical & women's fiction, migration, and resilience.",
-    registrationUrl: "https://facebook.com/events/786696447487878",
+    registrationUrl:
+      "https://www.facebook.com/events/REPLACE_WITH_EVENT_ID_BANGALORE",
     status: "upcoming",
-    cover: "/images/events/bangalore.jpg",
+    cover: "/lovable-uploads/bangalore.jpg",
   },
   {
     id: "2025-10-18-pune",
     title: "Author Event — The Wildflower of Assam",
     city: "Pune",
     venue: "Read & Brew",
-    date: "2025-10-18T17:00:00+05:30",
-    timezone: "Asia/Kolkata",
-    description:
-      "Reading, discussion, audience Q&A, and book signing.",
-    registrationUrl: "https://facebook.com/events/807002092292494",
+    date: "Sat, Oct 18, 2025 · 5:00 PM (IST)",
+    description: "Reading, discussion, audience Q&A, and book signing.",
+    registrationUrl:
+      "https://www.facebook.com/events/REPLACE_WITH_EVENT_ID_PUNE",
     status: "upcoming",
-    cover: "/images/events/pune.jpg",
+    cover: "/lovable-uploads/pune.jpg",
   },
   {
     id: "2025-09-18-brisbane",
     title: "Book@Stones Brisbane — Completed",
     city: "Brisbane",
     venue: "Books@Stones, Stones Corner",
-    date: "2025-09-18T18:00:00+10:00",
-    timezone: "Australia/Brisbane",
+    date: "Thu, Sep 18, 2025 · 6:00 PM (AEST)",
     description:
       "Thanks to everyone who joined! Photos and videos from the evening are below.",
-    registrationUrl: undefined,
     status: "past",
-    cover: "/images/events/brisbane.jpg",
+    cover: "/lovable-uploads/brisbane.jpg",
   },
 ];
 
-// ---- 2) Optional: add media for past events here (Brisbane) ----
-// Place the files under /public/media/brisbane-2025-09/ and reference below.
-
+// Put your uploaded photos (exact filenames) under /public/lovable-uploads
 const BRISBANE_PHOTOS: string[] = [
-  "/media/brisbane-2025-09/photo1.jpg",
-  "/media/brisbane-2025-09/photo2.jpg",
-  "/media/brisbane-2025-09/photo3.jpg",
-  "/media/brisbane-2025-09/photo4.jpg",
+  "/lovable-uploads/brisbane-2025-09-1.jpg",
+  "/lovable-uploads/brisbane-2025-09-2.jpg",
+  "/lovable-uploads/brisbane-2025-09-3.jpg",
+  "/lovable-uploads/brisbane-2025-09-4.jpg",
 ];
 
+// Optional: YouTube/Vimeo embed for Brisbane highlights
 const BRISBANE_VIDEOS: { title: string; embedUrl: string }[] = [
-  // For YouTube, use https://www.youtube.com/embed/VIDEO_ID
-  // For Vimeo, use https://player.vimeo.com/video/VIDEO_ID
   { title: "Highlights Reel", embedUrl: "https://www.youtube.com/embed/REPLACE_VIDEO_ID" },
 ];
 
-// ---- Helpers ----
-function formatEventDate(iso: string, tzLabel?: string) {
-  try {
-    const d = new Date(iso);
-    // Browser will format in local timezone; if you want fixed tz text, append tz label
-    return `${d.toLocaleDateString(undefined, {
-      weekday: "short",
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    })} · ${d.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })}${
-      tzLabel ? ` (${tzLabel})` : ""
-    }`;
-  } catch {
-    return iso;
-  }
-}
-
-export default function EventsPage() {
-  const upcoming = EVENTS.filter((e) => e.status === "upcoming").sort((a, b) => +new Date(a.date) - +new Date(b.date));
-  const past = EVENTS.filter((e) => e.status === "past").sort((a, b) => +new Date(b.date) - +new Date(a.date));
+export default function Events() {
+  const upcoming = EVENTS.filter((e) => e.status === "upcoming");
+  const past = EVENTS.filter((e) => e.status === "past");
 
   return (
-    <main className="mx-auto max-w-5xl px-4 py-10">
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl md:text-4xl font-semibold">Author Events — India Tour</h1>
-        <p className="mt-2 text-sm text-neutral-600">RSVP below to secure your spot. Limited seating at bookstores.</p>
+    <main style={{ maxWidth: 1040, margin: "0 auto", padding: "2rem 1rem" }}>
+      <header style={{ textAlign: "center", marginBottom: "2rem" }}>
+        <h1 style={{ fontSize: 28, margin: 0 }}>Author Events — India Tour</h1>
+        <p style={{ color: "#555" }}>
+          RSVP below to secure your spot. Limited seating at bookstores.
+        </p>
       </header>
 
       {/* Upcoming */}
-      <section className="mb-14">
-        <h2 className="text-2xl font-medium mb-6">Upcoming Events</h2>
-        <div className="grid gap-6 md:grid-cols-2">
+      <section style={{ marginBottom: "2rem" }}>
+        <h2 style={{ fontSize: 22, marginBottom: 12 }}>Upcoming Events</h2>
+        <div
+          style={{
+            display: "grid",
+            gap: 16,
+            gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+          }}
+        >
           {upcoming.map((e) => (
-            <article key={e.id} className="rounded-2xl border p-5 shadow-sm bg-white">
+            <article
+              key={e.id}
+              style={{
+                border: "1px solid #e5e5e5",
+                borderRadius: 12,
+                padding: 16,
+                background: "#fff",
+              }}
+            >
               {e.cover && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={e.cover} alt={`${e.city} event`} className="h-44 w-full object-cover rounded-xl mb-4" />
+                <img
+                  src={e.cover}
+                  alt={`${e.city} event`}
+                  style={{
+                    width: "100%",
+                    height: 176,
+                    objectFit: "cover",
+                    borderRadius: 8,
+                    marginBottom: 12,
+                  }}
+                />
               )}
-              <div className="flex items-center justify-between gap-3 flex-wrap">
-                <h3 className="text-xl font-semibold">{e.title}</h3>
-                <span className="inline-flex items-center rounded-full border px-3 py-1 text-xs">
+
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  gap: 8,
+                  alignItems: "center",
+                  flexWrap: "wrap",
+                }}
+              >
+                <h3 style={{ fontSize: 18, margin: 0 }}>{e.title}</h3>
+                <span
+                  style={{
+                    fontSize: 12,
+                    border: "1px solid #ddd",
+                    borderRadius: 999,
+                    padding: "2px 8px",
+                  }}
+                >
                   {e.city}
                 </span>
               </div>
-              <p className="mt-1 text-sm text-neutral-600">{e.venue}</p>
-              <p className="mt-1 text-sm">{formatEventDate(e.date, e.timezone)}</p>
-              {e.description && <p className="mt-3 text-sm text-neutral-800">{e.description}</p>}
+
+              <p style={{ margin: "6px 0", color: "#666", fontSize: 14 }}>
+                {e.venue}
+              </p>
+              <p style={{ margin: "2px 0", fontSize: 14 }}>{e.date}</p>
+              {e.description && (
+                <p style={{ marginTop: 8, fontSize: 14 }}>{e.description}</p>
+              )}
 
               {e.registrationUrl ? (
-                <div className="mt-4">
-                  <Link
+                <div style={{ marginTop: 12 }}>
+                  <a
                     href={e.registrationUrl}
                     target="_blank"
-                    className="inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-medium border hover:bg-neutral-50"
+                    rel="noreferrer"
+                    style={{
+                      display: "inline-block",
+                      border: "1px solid #222",
+                      borderRadius: 999,
+                      padding: "8px 14px",
+                      fontSize: 14,
+                      textDecoration: "none",
+                      color: "inherit",
+                    }}
                   >
                     RSVP / Register
-                  </Link>
+                  </a>
                 </div>
               ) : (
-                <p className="mt-4 text-xs text-neutral-500">Registration link coming soon.</p>
+                <p style={{ marginTop: 12, fontSize: 12, color: "#777" }}>
+                  Registration link coming soon.
+                </p>
               )}
             </article>
           ))}
         </div>
       </section>
 
-      {/* Past / Brisbane Gallery */}
-      <section className="mb-6">
-        <h2 className="text-2xl font-medium mb-6">Past Events</h2>
+      {/* Past (Brisbane Gallery) */}
+      <section>
+        <h2 style={{ fontSize: 22, marginBottom: 12 }}>Past Events</h2>
         {past.map((e) => (
-          <article key={e.id} className="mb-10 rounded-2xl border p-5 shadow-sm bg-white">
-            <div className="flex items-center justify-between gap-3 flex-wrap">
-              <h3 className="text-xl font-semibold">{e.title}</h3>
-              <span className="inline-flex items-center rounded-full border px-3 py-1 text-xs">{e.city}</span>
+          <article
+            key={e.id}
+            style={{
+              border: "1px solid #e5e5e5",
+              borderRadius: 12,
+              padding: 16,
+              background: "#fff",
+              marginBottom: 16,
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                gap: 8,
+                alignItems: "center",
+                flexWrap: "wrap",
+              }}
+            >
+              <h3 style={{ fontSize: 18, margin: 0 }}>{e.title}</h3>
+              <span
+                style={{
+                  fontSize: 12,
+                  border: "1px solid #ddd",
+                  borderRadius: 999,
+                  padding: "2px 8px",
+                }}
+              >
+                {e.city}
+              </span>
             </div>
-            <p className="mt-1 text-sm text-neutral-600">{e.venue}</p>
-            <p className="mt-1 text-sm">{formatEventDate(e.date, e.timezone)}</p>
-            {e.description && <p className="mt-3 text-sm text-neutral-800">{e.description}</p>}
 
-            {/* Brisbane gallery only if media exists */}
+            <p style={{ margin: "6px 0", color: "#666", fontSize: 14 }}>
+              {e.venue}
+            </p>
+            <p style={{ margin: "2px 0", fontSize: 14 }}>{e.date}</p>
+            {e.description && (
+              <p style={{ marginTop: 8, fontSize: 14 }}>{e.description}</p>
+            )}
+
+            {/* Brisbane-only media */}
             {e.id === "2025-09-18-brisbane" && (
-              <div className="mt-6 space-y-8">
+              <div style={{ marginTop: 16 }}>
                 {BRISBANE_VIDEOS.length > 0 && (
-                  <div>
-                    <h4 className="text-lg font-medium mb-3">Videos</h4>
-                    <div className="grid gap-6 md:grid-cols-2">
+                  <div style={{ marginBottom: 16 }}>
+                    <h4 style={{ marginBottom: 8 }}>Videos</h4>
+                    <div
+                      style={{
+                        display: "grid",
+                        gap: 16,
+                        gridTemplateColumns:
+                          "repeat(auto-fill, minmax(320px, 1fr))",
+                      }}
+                    >
                       {BRISBANE_VIDEOS.map((v, i) => (
-                        <div key={i} className="aspect-video w-full overflow-hidden rounded-xl border">
+                        <div
+                          key={i}
+                          style={{
+                            position: "relative",
+                            paddingTop: "56.25%",
+                            border: "1px solid #eee",
+                            borderRadius: 8,
+                            overflow: "hidden",
+                          }}
+                        >
                           <iframe
-                            className="h-full w-full"
                             src={v.embedUrl}
                             title={v.title}
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
+                            style={{
+                              position: "absolute",
+                              top: 0,
+                              left: 0,
+                              width: "100%",
+                              height: "100%",
+                              border: 0,
+                            }}
                           />
                         </div>
                       ))}
@@ -197,14 +275,34 @@ export default function EventsPage() {
 
                 {BRISBANE_PHOTOS.length > 0 && (
                   <div>
-                    <h4 className="text-lg font-medium mb-3">Photo Gallery</h4>
-                    <div className="grid gap-3 grid-cols-2 md:grid-cols-3">
+                    <h4 style={{ marginBottom: 8 }}>Photo Gallery</h4>
+                    <div
+                      style={{
+                        display: "grid",
+                        gap: 8,
+                        gridTemplateColumns:
+                          "repeat(auto-fill, minmax(160px, 1fr))",
+                      }}
+                    >
                       {BRISBANE_PHOTOS.map((src, i) => (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img key={i} src={src} alt={`Brisbane event photo ${i + 1}`} className="h-44 w-full object-cover rounded-lg border" />
+                        <img
+                          key={i}
+                          src={src}
+                          alt={`Brisbane event photo ${i + 1}`}
+                          style={{
+                            width: "100%",
+                            height: 176,
+                            objectFit: "cover",
+                            borderRadius: 8,
+                            border: "1px solid #eee",
+                          }}
+                        />
                       ))}
                     </div>
-                    <p className="mt-2 text-xs text-neutral-500">To add more photos, drop files in /public/media/brisbane-2025-09/ and append their paths in BRISBANE_PHOTOS.</p>
+                    <p style={{ marginTop: 6, fontSize: 12, color: "#777" }}>
+                      Add/edit photos in <code>/public/lovable-uploads</code> and
+                      update the list above as needed.
+                    </p>
                   </div>
                 )}
               </div>
@@ -213,7 +311,7 @@ export default function EventsPage() {
         ))}
       </section>
 
-      <footer className="mt-12 text-center text-xs text-neutral-500">
+      <footer style={{ marginTop: 24, textAlign: "center", fontSize: 12, color: "#777" }}>
         For venue-specific questions, please contact the host bookstore.
       </footer>
     </main>
