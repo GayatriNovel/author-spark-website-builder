@@ -25,10 +25,7 @@ const Index = () => {
         <p className="mb-6 text-gray-600">
           Meet me in person, hear readings, and get your copy signed.
         </p>
-        <Link
-          to="/events"
-          className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg shadow hover:bg-indigo-700 transition"
-        >
+        <Link to="/events" onClick={() => window.scrollTo(0,0)}>
           View Events & RSVP
         </Link>
         <Contact />
