@@ -5,6 +5,8 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import GoodreadsReviews from "@/components/GoodreadsReviews";
+import AmazonReviews from "@/components/AmazonReviews";
+
 
 const Index = () => {
   return (
@@ -16,6 +18,7 @@ const Index = () => {
 
       {/* Goodreads Reviews at the bottom */}
       <GoodreadsReviews />
+      <AmazonReviews />
 
       {/* New section for Events */}
       <div className="text-center py-12 bg-gray-50">
