@@ -17,7 +17,7 @@ const Index = () => {
       {/* Goodreads Reviews at the bottom */}
       <GoodreadsReviews />
       <AmazonReviews />
-      <Contact />
+      
 
       {/* New section for Events */}
       <div className="text-center py-12 bg-gray-50">
@@ -31,8 +31,9 @@ const Index = () => {
         >
           View Events & RSVP
         </Link>
+        <Contact />
       </div>
-
+    
       <Footer />
     </div>
   );
