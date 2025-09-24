@@ -19,17 +19,20 @@ const Index = () => {
       <AmazonReviews />
       
 
-      {/* New section for Events */}
-      <div className="text-center py-12 bg-gray-50">
-        <h2 className="text-2xl font-semibold mb-4">Join My Author Events</h2>
-        <p className="mb-6 text-gray-600">
+     {/* New section for Events */}
+    <div className="text-center py-8 bg-gray-50">
+      <h2 className="text-2xl font-semibold mb-2">Join My Author Events</h2>
+        <p className="text-gray-600 mb-6">
           Meet me in person, hear readings, and get your copy signed.
         </p>
-        <Link to="/events" onClick={() => window.scrollTo(0,0)}>
-          View Events & RSVP
-        </Link>
-        <Contact />
-      </div>
+        <Link
+        to="/events"
+      className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition"
+      >
+    View Events & RSVP
+  </Link>
+</div>
+
     
       <Footer />
     </div>
