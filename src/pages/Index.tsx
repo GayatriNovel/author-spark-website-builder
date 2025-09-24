@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import Hero from "@/components/Hero";
 import FeaturedBooks from "@/components/FeaturedBooks";
 import About from "@/components/About";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import GoodreadsReviews from "@/components/GoodreadsReviews";
 import AmazonReviews from "@/components/AmazonReviews";
+import Contact from "@/components/Contact";
 
 
 const Index = () => {
@@ -14,11 +14,10 @@ const Index = () => {
       <Hero />
       <FeaturedBooks />
       <About />
-      <Contact />
-
       {/* Goodreads Reviews at the bottom */}
       <GoodreadsReviews />
       <AmazonReviews />
+      <Contact />
 
       {/* New section for Events */}
       <div className="text-center py-12 bg-gray-50">
