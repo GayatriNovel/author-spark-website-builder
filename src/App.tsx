@@ -1,6 +1,7 @@
 // src/App.tsx
 import React from "react";
 import Events from "./pages/events";
+import ChatWidget from "./components/ChatWidget";
 
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -19,6 +20,7 @@ const App = () => (
       <Toaster />
       <Sonner />
        <ScrollToTop />
+       <ChatWidget />
       {/* Router is provided in main.tsx via <BrowserRouter> */}
       <Routes>
         <Route path="/" element={<Index />} />
@@ -27,7 +29,7 @@ const App = () => (
         <Route path="*" element={<NotFound />} />
       </Routes>
     </TooltipProvider>
-  </QueryClientProvider>
+  </QueryClientProvider>  
 );
 
 export default App;
