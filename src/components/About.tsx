@@ -50,7 +50,7 @@ const About = () => {
             <Card className="bg-literary-navy text-white shadow-book">
               <CardContent className="p-6 text-center">
                 <div className="text-3xl font-bold mb-2">Global</div>
-                <div className="text-sm font-medium">Availability</div>
+                <div className="text-2xl font-bold mb-2">Availability</div>
               </CardContent>
             </Card>
             
