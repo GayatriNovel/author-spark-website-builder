@@ -40,7 +40,19 @@ const About = () => {
             </figure>
           </div>
           
-        
+          <div className="grid grid-cols-2 gap-6 animate-scale-in">
+            <Card className="bg-gradient-accent text-white shadow-elegant">
+              <CardContent className="p-6 text-center">
+                <div className="text-3xl font-bold mb-2">Debut Novel</div>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-literary-navy text-white shadow-book">
+              <CardContent className="p-6 text-center">
+                <div className="text-3xl font-bold mb-2">Global</div>
+                <div className="text-sm font-medium">Availability</div>
+              </CardContent>
+            </Card>
             
             <Card className="bg-accent text-white shadow-elegant">
               <CardContent className="p-6 text-center">
