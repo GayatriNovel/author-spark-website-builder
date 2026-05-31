@@ -50,12 +50,12 @@ const EVENTS: EventItem[] = [
     description: "Reading, discussion, audience Q&A, and book signing.",
     registrationUrl:
       "https://www.facebook.com/events/807002092292494",
-    status: "upcoming",
+    status: "past",
     cover: "/lovable-uploads/Pune-3.png",
   },
   {
     id: "2025-09-18-brisbane",
-    title: "Book@Stones Brisbane — Completed",
+    title: "Book Launch - Book@Stones Brisbane",
     city: "Brisbane",
     venue: "Books@Stones, Stones Corner",
     date: "Thu, Sep 18, 2025 · 6:00 PM (AEST)",
