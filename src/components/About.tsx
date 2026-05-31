@@ -57,7 +57,7 @@ const About = () => {
             <Card className="bg-accent text-white shadow-elegant">
               <CardContent className="p-6 text-center">
                  <div className="text-3xl font-bold mb-2">Theme</div>
-                <div className="text-2xl font-bold mb-2">Political Unrest & Illegal Immigration</div>
+                <div className="text-2xl font-bold mb-2">Political Unrest & Domestic Violence</div>
               </CardContent>
             </Card>
             
