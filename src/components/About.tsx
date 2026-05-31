@@ -43,7 +43,6 @@ const About = () => {
           <div className="grid grid-cols-2 gap-6 animate-scale-in">
             <Card className="bg-gradient-accent text-white shadow-elegant">
               <CardContent className="p-6 text-center">
-                <div className="text-3xl font-bold mb-2">1</div>
                 <div className="text-sm font-medium">Debut Novel</div>
               </CardContent>
             </Card>
