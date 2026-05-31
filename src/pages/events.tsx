@@ -25,7 +25,7 @@ const EVENTS: EventItem[] = [
       "Conversation and reading from the novel, followed by audience Q&A and signing.",
     registrationUrl:
       "https://www.facebook.com/events/1430072651429073",
-    status: "upcoming",
+    status: "past",
     cover: "/lovable-uploads/Kolkata-2.png",
   },
   {
@@ -38,7 +38,7 @@ const EVENTS: EventItem[] = [
       "An evening on historical & women's fiction, migration, and resilience.",
     registrationUrl:
       "https://www.facebook.com/events/786696447487878",
-    status: "upcoming",
+    status: "past",
     cover: "/lovable-uploads/Bangalore.png",
   },
   {
